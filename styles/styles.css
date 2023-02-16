@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/*Configuración global*/
+:root {
+  --active-icon: #dbd3f8;
+  --hover: #9c9ba1;
+  --background: #e4e9f5;
+  --inactive: #6b6779;
+  --active: #dbd3f8;
+  --black: #000000;
+  --white: #ffffff;
+  --sm: 13px;
+  --md: 18px;
+  --lg: 28px;
+}
+
+html {
+  background-color: var(--background);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.sidebar-extend {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 120px;
+  background-color: var(--white);
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+.menu,
+.menu2 {
+  cursor: pointer;
+}
+
+.sidebar-compress {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80px;
+  background-color: var(--white);
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+.sidebar svg {
+  width: 15px;
+  height: 15px;
+}
+
+.sidebar svg path {
+  fill: var(--inactive);
+}
+
+.sidebar-extend .icon-home {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--inactive);
+}
+
+.sidebar-extend .icon-home :nth-child(2) {
+  display: none;
+}
+
+.sidebar-compress .icon-home :nth-child(1) {
+  display: none;
+}
+
+.sidebar-extend .icon-home svg {
+  margin-right: 10px;
+}
+
+.sidebar-compress .icon-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--inactive);
+}
+
+.sidebar-extend .icons {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 40px;
+  height: 50vh;
+  width: 100%;
+  justify-items: center;
+}
+
+.sidebar-extend button {
+  width: 100px;
+  height: 55px;
+}
+
+button:hover {
+  background-color: var(--background);
+  border-radius: 20px;
+}
+
+.target {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.ontarget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: var(--active);
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.sidebar-extend .icons .ontarget p {
+  color: var(--black);
+}
+
+.ontarget svg path {
+  fill: var(--black);
+}
+
+.sidebar-compress .icons {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 40px;
+  height: 50vh;
+  width: 100%;
+  gap: 0;
+  justify-items: center;
+}
+
+.sidebar-extend .icons p {
+  display: flex;
+  font-size: var(--sm);
+  text-align: center;
+  font-weight: 700;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+  color: var(--inactive);
+  justify-self: start;
+}
+
+.sidebar-compress .icons p {
+  display: none;
+}
